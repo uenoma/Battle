@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
 
 @end
@@ -18,6 +19,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	[_setupView setHidden:YES];
+	
 }
 
 - (void)viewDidUnload
@@ -31,4 +35,17 @@
 	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)pushNewGame:(id)sender
+{
+	[_setupView setHidden:NO];
+}
+
+- (IBAction)pushLoadGame:(id)sender
+{
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+	[_setupView setHidden:YES];
+}
 @end

@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "MainModel.h"
+#import "PlayerModel.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -21,6 +24,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+	
+	MainModel* model = [MainModel model];
+	
+	PlayerModel* player = [[PlayerModel alloc] init];
+	[model setPlayer:player];
+	[player setUnitType:UnitType_Heavy];
+	[player release];
+	
     return YES;
 }
 							

@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+	IBOutlet UIView*	_setupView;
+}
 
+- (IBAction)pushNewGame:(id)sender;
+- (IBAction)pushLoadGame:(id)sender;
 @end
